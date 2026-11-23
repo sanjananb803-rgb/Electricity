@@ -24,6 +24,11 @@ def total_bill(units):
     return units_cost(units) + fixed_charge()
 
 
+# New feature added in Phase 4
+def is_high_consumption(units):
+    return units > 300
+
+
 # Main function
 def main():
     print("===== ELECTRICITY BILL CALCULATOR =====")
@@ -40,7 +45,9 @@ def main():
     print("Electricity Cost: Rs.", units_cost(units))
     print("Fixed Charge: Rs.", fixed_charge())
     print("Total Electricity Bill: Rs.", total_bill(units))
+    print("High Consumption:", is_high_consumption(units))
 
 
+# Main program execution
 if __name__ == "__main__":
     main()
